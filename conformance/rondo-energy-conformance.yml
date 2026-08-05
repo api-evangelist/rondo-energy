@@ -1,0 +1,80 @@
+generated: '2026-08-05'
+method: probed
+source: live probes of rondo.com hosts; no machine-readable contract exists to derive from
+note: >-
+  Rondo Energy publishes no OpenAPI, Swagger, GraphQL SDL, AsyncAPI, MCP server
+  or agent card, so nothing here is derived from a contract - every entry below
+  is the recorded result of a live probe. Rondo sells industrial heat-battery
+  hardware and delivered heat (capital purchase, lease, or heat purchase
+  agreement); the marketing site describes "automated AI patented controls" on
+  the Rondo Heat Battery but publishes no interface, telemetry schema, or
+  integration documentation for them. The only authenticated surfaces on the
+  domain are portal.rondo.com (a Jetty session portal) and login.rondo.com (an
+  Okta custom domain whose TLS certificate does not match the host).
+standards:
+- id: openapi
+  conforms: false
+  evidence: >-
+    /openapi.json, /swagger.json, /api-docs and /docs all returned 404 on
+    www.rondo.com; api.rondo.com, developer.rondo.com and docs.rondo.com do not
+    resolve in DNS.
+- id: oauth2
+  conforms: false
+  evidence: >-
+    /.well-known/oauth-authorization-server returned 404 on www.rondo.com. The
+    Okta host login.rondo.com could not be probed (TLS subject mismatch).
+- id: openid-connect
+  conforms: false
+  evidence: >-
+    /.well-known/openid-configuration returned 404 on www.rondo.com and on
+    portal.rondo.com. login.rondo.com CNAMEs to an Okta trial custom domain but
+    presents no matching certificate, so no OIDC discovery document is retrievable.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No public API contract to evaluate.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returned 404 on www.rondo.com, rondo.com and portal.rondo.com.
+- id: rfc8615-well-known-uris
+  conforms: false
+  evidence: No /.well-known/ document returned 200 on any Rondo host - see well-known/rondo-energy-well-known.yml.
+- id: llms-txt
+  conforms: false
+  evidence: https://www.rondo.com/llms.txt returned 404.
+- id: a2a-agent-card
+  conforms: false
+  evidence: >-
+    /.well-known/agent-card.json and the legacy /.well-known/agent.json both
+    returned 404 on www.rondo.com and portal.rondo.com. No agent card artifact
+    is written.
+- id: sitemaps-org
+  conforms: true
+  evidence: https://www.rondo.com/sitemap.xml returned 200 with a valid urlset (marketing pages only, no API surface).
+- id: hsts
+  conforms: true
+  evidence: www.rondo.com sets Strict-Transport-Security with max-age 63072000 - see security/rondo-energy-domain-security.yml.
+- id: dnssec
+  conforms: true
+  evidence: rondo.com is DNSSEC-signed - see security/rondo-energy-domain-security.yml.
+- id: dmarc
+  conforms: true
+  evidence: rondo.com publishes DMARC with policy quarantine - see security/rondo-energy-domain-security.yml.
+x-evidence:
+- url: https://www.rondo.com/openapi.json
+  status: 404
+- url: https://www.rondo.com/swagger.json
+  status: 404
+- url: https://www.rondo.com/api-docs
+  status: 404
+- url: https://www.rondo.com/docs
+  status: 404
+- url: https://www.rondo.com/llms.txt
+  status: 404
+- url: https://www.rondo.com/.well-known/agent-card.json
+  status: 404
+- url: https://www.rondo.com/.well-known/openid-configuration
+  status: 404
+- url: https://portal.rondo.com/web/home
+  status: 302
+- url: https://www.rondo.com/sitemap.xml
+  status: 200

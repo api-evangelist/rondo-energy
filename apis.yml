@@ -1,10 +1,24 @@
 aid: rondo-energy
 name: Rondo Energy
-description: 'Rondo Energy is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Rondo Energy is an Alameda, California industrial decarbonization company
+  led by CEO John O''Donnell that builds the Rondo Heat Battery (RHB), a thermal energy
+  storage system that converts intermittent wind and solar electricity into heat stored
+  in thousands of tons of refractory brick at temperatures up to 1,500C and returns
+  it as continuous steam, thermal oil, superheated air, or combined heat and power
+  at rated outputs from 2MWth to over 100MWth. The RHB is sold as a drop-in replacement
+  for a fossil-fuel boiler, via capital purchase, lease, or heat purchase agreement,
+  into cement, food and beverage, chemicals, fuels and ethanol, textiles, pulp and
+  paper, mining, pharmaceuticals, and direct air capture. Rondo operates the world''s
+  largest industrial heat battery and has announced a 90GWh factory plan with Siam
+  Cement Group, backed by Breakthrough Energy Ventures and Catalyst, Energy Impact
+  Partners, Microsoft''s Climate Innovation Fund, Rio Tinto, SABIC, Aramco Ventures,
+  and the European Investment Bank. Rondo sells hardware and delivered heat, not software:
+  it publishes no developer portal, API reference, or machine-readable specification.'
+image: https://www.rondo.com/favicon.png
 url: https://raw.githubusercontent.com/api-evangelist/rondo-energy/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
+x-source-url: https://forgeglobal.com/rondo-energy_stock/
 x-tier: stub
 x-tier-reason: harvest
 specificationVersion: '0.20'
@@ -12,6 +26,15 @@ created: '2026-08-05'
 modified: '2026-08-05'
 tags:
 - Company
+- Energy
+- Energy Storage
+- Thermal Energy Storage
+- Industrial Heat
+- Decarbonization
+- Climate Tech
+- Renewable Energy
+- Manufacturing
+- Hardware
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +43,50 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://forgeglobal.com/rondo-energy_stock/
+  url: https://www.rondo.com/
+- type: Blog
+  url: https://www.rondo.com/news-press
+- type: Support
+  url: https://www.rondo.com/contact
+- type: PrivacyPolicy
+  url: https://www.rondo.com/privacy-policy
+- type: TermsOfService
+  url: https://www.rondo.com/purchase-order-terms-conditions
+- type: LinkedIn
+  url: https://www.linkedin.com/company/rondo-energy/
+- type: DomainSecurity
+  url: security/rondo-energy-domain-security.yml
+- type: Conformance
+  url: conformance/rondo-energy-conformance.yml
+- type: LLMsTxt
+  url: llms/rondo-energy-llms.txt
+x-enrichment:
+  date: '2026-08-05'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Rondo Energy sells a physical product - a refractory-brick industrial heat
+    battery, bought outright, leased, or paid for as delivered steam - and its
+    entire web surface is a 44-page Next.js marketing site plus a Jetty login
+    portal; there is no developer section, no API host (api/developer/docs
+    .rondo.com do not resolve), and the one identity host that exists,
+    login.rondo.com, is an Okta custom domain whose TLS certificate does not
+    match the name.
+  evidence:
+  - url: https://www.rondo.com/openapi.json
+    status: 404
+  - url: https://www.rondo.com/docs
+    status: 404
+  - url: https://www.rondo.com/llms.txt
+    status: 404
+  - url: https://www.rondo.com/.well-known/agent-card.json
+    status: 404
+  - url: https://portal.rondo.com/web/home
+    status: 302
+  - url: https://www.rondo.com/sitemap.xml
+    status: 200
+  checked: '2026-08-05'

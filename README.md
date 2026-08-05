@@ -42,5 +42,14 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Rondo Energy is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
+Rondo Energy is an Alameda, California industrial decarbonization company that builds the Rondo Heat
+Battery (RHB), a thermal energy storage system that converts intermittent wind and solar electricity
+into heat stored in refractory brick at up to 1,500C and returns it as continuous steam, thermal oil,
+superheated air, or combined heat and power from 2MWth to over 100MWth.
+
+**No public API surface.** Rondo sells hardware and delivered heat, not software. This profile records
+what was probed and what was found: no OpenAPI, GraphQL SDL, AsyncAPI, MCP server, agent card, or
+`/.well-known/` document exists on any `rondo.com` host. See `apis.yml` `x-coverage` for the evidence.
+
+- https://www.rondo.com/
 - https://forgeglobal.com/rondo-energy_stock/

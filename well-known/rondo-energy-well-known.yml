@@ -1,0 +1,42 @@
+generated: '2026-08-05'
+method: probed
+source: live probes of the rondo.com hosts (www, apex, portal, login)
+summary: >-
+  Rondo Energy publishes no /.well-known/ discovery documents on any host it
+  controls. Every probed path on www.rondo.com and rondo.com returned 404 from
+  the Next.js marketing site catch-all; portal.rondo.com (a Jetty/JSESSIONID
+  authenticated portal) returned 404 for the same paths; and login.rondo.com,
+  an Okta custom domain (CNAME trial-7187217.customdomains.okta.com) that would
+  normally serve OIDC discovery metadata anonymously, could not be probed at all
+  because its TLS certificate carries no matching subject name - an unprovisioned
+  or abandoned Okta trial custom domain. Absence is valid recorded data; no
+  WellKnown or SecurityTxt pointer is emitted in apis.yml because nothing was
+  found.
+hosts:
+- host: https://www.rondo.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: https://rondo.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+- host: https://portal.rondo.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: https://login.rondo.com
+  note: >-
+    Resolves to trial-7187217.customdomains.okta.com. TLS handshake fails with
+    "no alternative certificate subject name matches target host name", so no
+    /.well-known/ path is reachable. Recorded as unreachable, not as absent.
+  documents:
+  - {path: /.well-known/openid-configuration, status: 0, error: tls-subject-mismatch}
+  - {path: /.well-known/oauth-authorization-server, status: 0, error: tls-subject-mismatch}
+files: []
