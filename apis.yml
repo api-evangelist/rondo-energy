@@ -14,6 +14,17 @@ description: 'Rondo Energy is an Alameda, California industrial decarbonization 
   Partners, Microsoft''s Climate Innovation Fund, Rio Tinto, SABIC, Aramco Ventures,
   and the European Investment Bank. Rondo sells hardware and delivered heat, not software:
   it publishes no developer portal, API reference, or machine-readable specification.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.rondo.com/favicon.png
 url: https://raw.githubusercontent.com/api-evangelist/rondo-energy/refs/heads/main/apis.yml
 x-type: company
