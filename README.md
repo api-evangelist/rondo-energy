@@ -64,14 +64,83 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Rondo Energy is an Alameda, California industrial decarbonization company that builds the Rondo Heat
-Battery (RHB), a thermal energy storage system that converts intermittent wind and solar electricity
-into heat stored in refractory brick at up to 1,500C and returns it as continuous steam, thermal oil,
-superheated air, or combined heat and power from 2MWth to over 100MWth.
+Rondo Energy is an Alameda, California industrial decarbonization company led by CEO John O'Donnell that builds the Rondo Heat Battery (RHB), a thermal energy storage system that converts intermittent wind and solar electricity into heat stored in thousands of tons of refractory brick at temperatures up to 1,500C and returns it as continuous steam, thermal oil, superheated air, or combined heat and power at rated outputs from 2MWth to over 100MWth. The RHB is sold as a drop-in replacement for a fossil-fuel boiler, via capital purchase, lease, or heat purchase agreement, into cement, food and beverage, chemicals, fuels and ethanol, textiles, pulp and paper, mining, pharmaceuticals, and direct air capture. Rondo operates the world's largest industrial heat battery and has announced a 90GWh factory plan with Siam Cement Group, backed by Breakthrough Energy Ventures and Catalyst, Energy Impact Partners, Microsoft's Climate Innovation Fund, Rio Tinto, SABIC, Aramco Ventures, and the European Investment Bank. Rondo sells hardware and delivered heat, not software: it publishes no developer portal, API reference, or machine-readable specification.
 
-**No public API surface.** Rondo sells hardware and delivered heat, not software. This profile records
-what was probed and what was found: no OpenAPI, GraphQL SDL, AsyncAPI, MCP server, agent card, or
-`/.well-known/` document exists on any `rondo.com` host. See `apis.yml` `x-coverage` for the evidence.
+**Areas:** Company · Energy · Energy Storage · Thermal Energy Storage · Industrial Heat · Decarbonization · Climate Tech · Renewable Energy · Manufacturing · Hardware
 
-- https://www.rondo.com/
-- https://forgeglobal.com/rondo-energy_stock/
+## Rondo Energy on APIs.io
+
+Everything profiled for Rondo Energy is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/rondo-energy/](https://apis.io/providers/rondo-energy/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Rondo Energy Domain Security](https://apis.io/security/rondo-energy/rondo-energy-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.rondo.com/)
+- [Support](https://www.rondo.com/contact)
+- [Blog](https://www.rondo.com/news-press)
+- [Terms of service](https://www.rondo.com/purchase-order-terms-conditions)
+- [Privacy policy](https://www.rondo.com/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 13.0** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 21.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.6** — Energy & Utilities
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/rondo-energy/](https://apis.io/providers/rondo-energy/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Rondo Energy: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/rondo-energy/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
